@@ -1,5 +1,5 @@
 # memoria
-In-memory data structure server , which supports storing:
+**memoria** is a mini In-memory data structure server like **redis**, which supports storing:
 
 - [ ] strings
 - [ ] hashes
