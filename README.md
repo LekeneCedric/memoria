@@ -1,2 +1,9 @@
-# redis-server-clone
-The goal of this project is to build my own redis server
+# memoria
+- In-memory data structure server , which supports storing:
+  
+  [ ] strings
+  
+  [ ] hashes
+  
+  [ ] lists
+
