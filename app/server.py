@@ -17,16 +17,13 @@ def respond(client_socket: socket, db: Database):
             result = None
 
             if response["action"] == Action.MESSAGE:
-                print(response)
                 result = response["message"]
 
             if response["action"] == Action.GET:
-                print(response)
                 key = response["key"]
                 result = db.get(key)
 
             if response["action"] == Action.SET:
-                print(response)
                 db.set(response["key"], response["value"])
                 result = response["message"]
 
