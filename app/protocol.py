@@ -1,10 +1,10 @@
-from app.action import Action
+from action import Action
 
 def serialize_simple_string(message: str) -> bytes:
 
     return f'+{message}\r\n'.encode()
 
-def serialized_error_message(message: str) -> bytes:
+def serialize_error_message(message: str) -> bytes:
 
     return f'-{message}\r\n'.encode()
 
@@ -84,7 +84,7 @@ def deserialize_set_message(message: bytes) -> str:
 
     if not message_is_ok:
         return {"message" : "Error message"}
-    print(decoded_parse_message)
+
     for i in range(0, len(decoded_parse_message)):
         if ('set' in decoded_parse_message[i].lower()):
             return {"message": "OK", "key": decoded_parse_message[i+2], "value": decoded_parse_message[i+4]}
@@ -92,7 +92,7 @@ def deserialize_set_message(message: bytes) -> str:
     return {"message" : "Error message"}
 
 def deserialize_message(data: bytes) -> bytes:
-    print(data)
+
     try:
         for message in data.decode().split('\r\n'):
             if 'ping' in message.lower():

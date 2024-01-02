@@ -1,8 +1,8 @@
 import socket
 import _thread
-import app.protocol
-from app.database import Database
-from app.action import Action
+import protocol
+from database import Database
+from action import Action
 
 
 def respond(client_socket: socket, db: Database):
@@ -12,7 +12,7 @@ def respond(client_socket: socket, db: Database):
             if not data:
                 break
 
-            response = app.protocol.deserialize_message(data)
+            response = protocol.deserialize_message(data)
 
             result = None
 
@@ -31,10 +31,10 @@ def respond(client_socket: socket, db: Database):
                 result = response["message"]
 
             if response["error"] == True:
-                result = app.protocol.serialized_error_message(result)
+                result = protocol.serialized_error_message(result)
             if response["error"] == False:
-                result = app.protocol.serialize_simple_string(result)
-                
+                result = protocol.serialize_simple_string(result)
+
             client_socket.sendall(result)
 
         client_socket.close()
