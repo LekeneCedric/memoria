@@ -22,10 +22,10 @@ In-memory data structure server like **redis** , which supports :
 
 	*now we use the default redis-cli to test her server*
 
-	1 - Test PING-PONG : ```redis-cli PING```
+	1 - Test ping-pong : ```redis-cli ping```
 
-	2 - Test ECHO : ```redis-cli echo Hello```
+	2 - Test echo : ```redis-cli echo Hello```
 
-	3 - set Value : ```redis-cli set name Luc```
+	3 - Test set value : ```redis-cli set name Luc```
 
-	4 - get value : ```redis-cli get name```
+	4 - Test get value : ```redis-cli get name```
