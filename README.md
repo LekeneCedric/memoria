@@ -1,6 +1,6 @@
 # Memoria
 
-In-memory data structure server like **redis** , which supports :
+simple memcache whitch support :
 
 - [x] respond client
 - [x] respond multiple request client in same connection
