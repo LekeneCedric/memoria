@@ -27,9 +27,9 @@ def respond(client_socket: socket, db: Database):
                 db.set(response["key"], response["value"])
                 result = response["message"]
 
-            if response["error"] == True:
+            if response["error"]:
                 result = protocol.serialized_error_message(result)
-            if response["error"] == False:
+            if not response["error"]:
                 result = protocol.serialize_simple_string(result)
 
             client_socket.sendall(result)
