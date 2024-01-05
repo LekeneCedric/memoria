@@ -2,8 +2,8 @@
 
 simple memcache whitch support :
 
-- [x] respond client
-- [x] respond multiple request client in same connection
+- [x] respond to client
+- [x] respond to multiple client request in same connection
 - [x] handle concurrent clients
 - [X] storing strings
 - [X] get strings
