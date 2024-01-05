@@ -29,3 +29,8 @@ simple memcache whitch support :
 	3 - Test set value : ```redis-cli set name Luc```
 
 	4 - Test get value : ```redis-cli get name```
+
+- simple demo
+
+![simple_demo](https://github.com/LekeneCedric/memoria/blob/main/demo/demo.png)
+
