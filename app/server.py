@@ -33,7 +33,7 @@ def respond(client_socket: socket, db: Database):
                 result = protocol.serialize_simple_string(result)
 
             client_socket.sendall(result)
-
+            print(f'[+] respond : {result}')
         client_socket.close()
 
 def main():
@@ -45,6 +45,7 @@ def main():
     while True:
         try:
             client_socket , address = server_socket.accept()
+            print(f'[+] handle request from {address[0]}')
             _thread.start_new_thread(respond, (client_socket, db,))
         except KeyboardInterrupt:
             server_socket.close()

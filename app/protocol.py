@@ -96,7 +96,7 @@ def deserialize_message(data: bytes) -> bytes:
     try:
         for message in data.decode().split('\r\n'):
             if 'ping' in message.lower():
-                return {"action": Action.MESSAGE, "message": 'PONG'}
+                return {"action": Action.MESSAGE, "message": 'PONG', "error": False}
 
             if 'echo' in message.lower():
                 response = deserialize_echo_message(data)

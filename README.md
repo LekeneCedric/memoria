@@ -11,6 +11,9 @@ simple memcache whitch support :
 - [ ] storing lists
 
 # How to Test ?
+- Stop redis server
+
+	```sudo service redis stop```
 
 - Run server : ```make run```
 
@@ -32,5 +35,5 @@ simple memcache whitch support :
 
 - simple demo
 
-![simple_demo](https://github.com/LekeneCedric/memoria/blob/main/demo/demo.png)
+![simple_demo](https://github.com/LekeneCedric/memoria/blob/main/demo/client-server-communication.png)
 
