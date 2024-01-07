@@ -23,7 +23,7 @@ simple memcache whitch support :
 
 - Set client command on another terminal
 
-	*now we use the default redis-cli to test her server*
+	*now we use the default redis-cli tool to test her server*
 
 	1 - Test ping-pong : ```redis-cli ping```
 
